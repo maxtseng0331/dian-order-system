@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>點點點--Dian³ - 點餐系統</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfaf2; /* 溫暖的米白色背景 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 1. 頂部大型橫幅裝飾 */
+        .hero-section {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            border-bottom: 8px solid #d9534f;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 5px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* 2. 主食類別容器 */
+        .category-container {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        /* 3. 美化類別卡片 */
+        .category-card {
+            width: 250px;
+            height: 350px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            border: 4px solid white; /* 白色邊框裝飾 */
+        }
+
+        .rice-card { background: #ffcc33; } /* 黃色代表飯 */
+        .noodle-card { background: #ff6347; } /* 紅色代表麵 */
+
+        .category-card:hover {
+            transform: scale(1.05) rotate(2deg); /* 懸停時放大並輕微旋轉 */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .category-card span {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .category-card h2 {
+            font-size: 2rem;
+            margin: 0;
+            background: rgba(0,0,0,0.2);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        /* 4. 裝飾性邊框文字 */
+        .footer-note {
+            margin-top: 50px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+            width: 80%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <h1>點點點--Dian³</h1>
+        <p>— 職人手作．溫暖食刻 —</p>
+    </div>
+
+    <h2 style="margin-top: 40px; color: #555;">請選擇今日想享用的主食類型</h2>
+
+    <div class="category-container">
+        <a href="/category/飯" class="category-card rice-card">
+            <span>🍚</span>
+            <h2>飯類料理</h2>
+            <p style="margin-top: 10px;">香 Q 米飯與豐富主餐</p>
+        </a>
+
+        <a href="/category/麵" class="category-card noodle-card">
+            <span>🍜</span>
+            <h2>麵食專區</h2>
+            <p style="margin-top: 10px;">彈牙勁道與濃郁湯頭</p>
+        </a>
+    </div>
+
+    <div class="footer-note">
+        本餐廳由 Python Flask 智慧系統提供點餐服務
+    </div>
+
+</body>
+</html>
